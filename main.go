@@ -2,7 +2,7 @@ package main
 
 import (
 	"net/http"
-	"github.com/hashemirafsan/logger/routes"
+	"github.com/hashemirafsan/memories/routes"
 )
 
 func main() {

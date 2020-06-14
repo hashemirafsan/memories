@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/hashemirafsan/logger/controller"
-	"github.com/hashemirafsan/logger/middleware"
+	"github.com/hashemirafsan/memories/controller"
+	"github.com/hashemirafsan/memories/middleware"
 	"github.com/gorilla/mux"
 )
 

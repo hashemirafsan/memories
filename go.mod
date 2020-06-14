@@ -1,4 +1,4 @@
-module github.com/hashemirafsan/logger
+module github.com/hashemirafsan/memories
 
 go 1.14
 
