@@ -9,8 +9,8 @@ import (
 // SetupRoutes ...
 func SetupRoutes() (*mux.Router) {
 	r := mux.NewRouter()
-	r.HandleFunc("/", controller.CallHome)
-	r.HandleFunc("/create", controller.CallCreate)
+	r.HandleFunc("/", controller.CallHome).Methods("GET")
+	r.HandleFunc("/create", controller.CallCreate).Methods("POST")
 	r.Use(middleware.ServiceClientMiddleware)
 
 	return r
