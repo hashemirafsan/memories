@@ -6,10 +6,12 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// SetupRoutes
+// SetupRoutes ...
 func SetupRoutes() (*mux.Router) {
 	r := mux.NewRouter()
 	r.HandleFunc("/", controller.CallHome)
+	r.HandleFunc("/create", controller.CallCreate)
 	r.Use(middleware.ServiceClientMiddleware)
+
 	return r
 }

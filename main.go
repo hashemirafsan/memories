@@ -2,11 +2,16 @@ package main
 
 import (
 	"net/http"
+	"github.com/hashemirafsan/memories/bootstrap"
 	"github.com/hashemirafsan/memories/routes"
 )
 
 func main() {
-	r := routes.SetupRoutes()
-	http.ListenAndServe(":10000", r)
+	migration := bootstrap.Migration{}
 
+	migration.Run()
+
+	router := routes.SetupRoutes()
+
+	http.ListenAndServe(":10000", router)
 }
